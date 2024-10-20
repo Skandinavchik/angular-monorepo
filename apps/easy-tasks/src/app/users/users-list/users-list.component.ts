@@ -19,4 +19,8 @@ export class UsersListComponent {
   constructor(private readonly usersService: UsersService) {
     this.users$ = this.usersService.getUsers()
   }
+
+  onClick(userId: string) {
+    console.log(userId)
+  }
 }

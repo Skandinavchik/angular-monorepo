@@ -1,11 +1,18 @@
 <mat-list role="list" class="list">
-  @for (user of users$ | async; track user.name) {
-    <mat-list-item role="listitem">
-      <app-user-card
-        [title]="user.name"
-        [avatar]="user.imgPath"
-        [alt]="user.name + ' avatar'"
-      />
-    </mat-list-item>
+  @if (users$ | async; as users) {
+    @for (user of users; track user.name) {
+      <mat-list-item role="listitem">
+        <app-user-card
+          [title]="user.name"
+          [avatar]="user.imgPath"
+          [alt]="user.name + ' avatar'"
+          (click)="onClick(user.id)"
+        />
+      </mat-list-item>
+    } @empty {
+      <li aria-hidden="true"> No users. </li>
+    }
+  } @else {
+    <div>Loading...</div>
   }
 </mat-list>
