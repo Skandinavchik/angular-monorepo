@@ -1,0 +1,11 @@
+<mat-list role="list" class="list">
+  @for (user of users$ | async; track user.name) {
+    <mat-list-item role="listitem">
+      <app-user-card
+        [title]="user.name"
+        [avatar]="user.imgPath"
+        [alt]="user.name + ' avatar'"
+      />
+    </mat-list-item>
+  }
+</mat-list>

@@ -1,6 +1,6 @@
 <mat-card appearance="outlined">
   <mat-card-content class="card">
-    <img mat-card-avatar class="card__avatar" src="https://material.angular.io/assets/img/examples/shiba1.jpg" alt="avatar">
+    <img mat-card-avatar class="card__avatar" [src]="avatar()" [alt]="avatar()">
     <mat-card-title>{{title()}}</mat-card-title>
   </mat-card-content>
 </mat-card>

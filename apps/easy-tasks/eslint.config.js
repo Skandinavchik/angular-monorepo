@@ -63,6 +63,7 @@ module.exports = [
 
       // TypeScript
       '@typescript-eslint/no-unused-vars': 'error',
+      '@typescript-eslint/no-empty-function': 'off',
     },
   },
   {
