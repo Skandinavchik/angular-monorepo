@@ -1,0 +1,12 @@
+.card {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+  
+  &__avatar {
+    background-size: cover;
+    margin: 0;
+  }
+}

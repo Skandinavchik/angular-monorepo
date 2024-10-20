@@ -10,5 +10,5 @@ import { UserCardComponent } from './users/user-card/user-card.component'
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title = 'easy-tasks'
+
 }
